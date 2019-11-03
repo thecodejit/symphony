@@ -9,7 +9,7 @@
             </p>
             <p>
             <label for="LoginaPassword">Password</label>
-            <input id="LoginPassword" type="password" required>
+            <input id="LoginPassword" type="password" placeholder="Your Password" required>
             </p>
     <button type="submit">LOG IN</button>
     </form>
@@ -38,17 +38,17 @@
 
             <p>
             <label for="email2">Confirm Email</label>
-            <input id="email2" type="text" placeholder="e.g. Soumya_jit" required>
+            <input id="email2" type="text" placeholder="yourname@gmail.com" required>
             </p>
 
             <p>
             <label for="Password">Password</label>
-            <input id="Password" type="password" required>
+            <input id="Password" type="password" placeholder="Password Should be 8bit long" required>
             </p>
 
             <p>
             <label for="Password2">ConfirmPassword</label>
-            <input id="Password2" type="password" required>
+            <input id="Password2" type="password" placeholder="Your Password" required>
             </p>
 
 
