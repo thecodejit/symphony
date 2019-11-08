@@ -15,6 +15,25 @@
 
         }
 
+
+        private function validateFirstname($fn){
+
+            if(strlen($fn) > 25 || strlen($fn)<2){
+                array_push($this->errorArray, "your first name must be between 2 and 25 characters");
+                return;
+            }
+
+        }
+
+        private function validateFirstname($ln){
+
+            if(strlen($ln) > 25 || strlen($ln)<2){
+                array_push($this->errorArray, "your last name must be between 2 and 25 characters");
+                return;
+            }
+
+        }
+
         private function validateemail{
 
             
