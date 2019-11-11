@@ -13,6 +13,13 @@
                $this->validateemail($em, $em2);
                 $this->validatePasswords($pw, $pw2);
 
+            if(empty($this->errorArray) == true){
+                return true;
+            }
+            else{
+                return false;
+            }
+
         }
 
         private function validateUsername($un){
