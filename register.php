@@ -24,21 +24,26 @@
     <form id="RegisterForm" action="register.php" method="POST">
             <h1>Register Your Account</h1>
             <p>
+            <?php echo $account->geterror("Username must be between 5 and 25 characters"); ?>
             <label for="RegisterUsername">Username</label>
             <input id="RegisterUsername" name ="username" type="text" placeholder="e.g. Soumya_jit" required>
             </p>
 
             <p>
+            <?php echo $account->geterror("your first name must be between 2 and 25 characters"); ?>
             <label for="Firstname">Firstname</label>
             <input id="Firstname" name ="firstName" type="text" placeholder="e.g. Soumya" required>
             </p>
 
             <p>
+            <?php echo $account->geterror("your last name must be between 2 and 25 characters"); ?>
             <label for="Lastname">Lastname</label>
             <input id="Lastname" name ="LastName" type="text" placeholder="e.g. Jit" required>
             </p>
 
             <p>
+            <?php echo $account->geterror("your email does not match!"); ?>
+            <?php echo $account->geterror("Email is invalid"); ?>
             <label for="email">email</label>
             <input id="email" name="email" type="text" placeholder="yourname@gmail.com" required>
             </p>
@@ -49,6 +54,9 @@
             </p>
 
             <p>
+            <?php echo $account->geterror("your passwords don't match!"); ?>
+            <?php echo $account->geterror("Password should contain only letter and numbers"); ?>
+            <?php echo $account->geterror("Password must be between 8 and 25 characters"); ?>
             <label for="Password">Password</label>
             <input id="Password" name="Password" type="password" placeholder="Password Should be 8bit long" required>
             </p>
