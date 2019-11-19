@@ -2,6 +2,12 @@
     include("include/handler/register-handler.php");
     include("include/classes/account.php");
     include("include/classes/Constant.php");
+    $account = new account();
+    function Inputvalue($name){
+        if (isset($_POST[$name])){
+            echo $_POST[$name];
+        }
+    }
 ?>
 
 
@@ -26,31 +32,31 @@
             <p>
             <?php echo $account->geterror(Constant::$usernamecharacters); ?>
             <label for="RegisterUsername">Username</label>
-            <input id="RegisterUsername" name ="username" type="text" placeholder="e.g. Soumya_jit" required>
+            <input id="RegisterUsername" name ="username" type="text" placeholder="e.g. Soumya_jit" value="<?php Inputvalue('username')?>" required>
             </p>
 
             <p>
             <?php echo $account->geterror(Constant::$firstnamecharacter); ?>
             <label for="Firstname">Firstname</label>
-            <input id="Firstname" name ="firstName" type="text" placeholder="e.g. Soumya" required>
+            <input id="Firstname" name ="firstName" type="text" placeholder="e.g. Soumya" value="<?php Inputvalue('firstName')?>" required>
             </p>
 
             <p>
             <?php echo $account->geterror(Constant::$lastnamecharacter); ?>
             <label for="Lastname">Lastname</label>
-            <input id="Lastname" name ="LastName" type="text" placeholder="e.g. Jit" required>
+            <input id="Lastname" name ="LastName" type="text" placeholder="e.g. Jit" value="<?php Inputvalue('LastName')?>" required>
             </p>
 
             <p>
             <?php echo $account->geterror(Constant::$emaildontmatch); ?>
             <?php echo $account->geterror(Constant::$emailInvalid); ?>
             <label for="email">email</label>
-            <input id="email" name="email" type="text" placeholder="yourname@gmail.com" required>
+            <input id="email" name="email" type="text" placeholder="yourname@gmail.com" value="<?php Inputvalue('email')?>"required>
             </p>
 
             <p>
             <label for="email2">Confirm Email</label>
-            <input id="email2" name="email2" type="text" placeholder="yourname@gmail.com" required>
+            <input id="email2" name="email2" type="text" placeholder="yourname@gmail.com" value="<?php Inputvalue('email2')?>" required>
             </p>
 
             <p>
