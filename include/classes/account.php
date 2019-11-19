@@ -2,16 +2,16 @@
     class Account{
         private $errorArray;
 
-        private function __construct(){
+        public function __construct(){
             $this->errorArray = array();
         }
 
         public function register($un, $fn, $ln, $em, $em2, $pw, $pw2){
             $this->validateUsername($un);
-             $this->validateFirstname($fn);
-              $this->validateLastname($ln);
-               $this->validateemail($em, $em2);
-                $this->validatePasswords($pw, $pw2);
+            $this->validateFirstname($fn);
+            $this->validateLastname($ln);
+            $this->validateemail($em, $em2);
+            $this->validatePasswords($pw, $pw2);
 
             if(empty($this->errorArray) == true){
                 return true;
