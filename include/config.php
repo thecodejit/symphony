@@ -1,6 +1,6 @@
 <?php
     ob_start();
-    $timezone = date_default_timezone_set("Asis/Kolkata");
+    $timezone = date_default_timezone_set("Asia/Kolkata");
     
     $con = mysqli_connect("localhost", "root", "", "symphony");
 
