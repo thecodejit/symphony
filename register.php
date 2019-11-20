@@ -2,6 +2,7 @@
     include("include/handler/register-handler.php");
     include("include/classes/account.php");
     include("include/classes/Constant.php");
+    include("include/config.php");
     $account = new account();
     function Inputvalue($name){
         if (isset($_POST[$name])){
