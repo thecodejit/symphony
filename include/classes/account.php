@@ -24,7 +24,7 @@
 
         public function geterror($error){
             if(!in_array($error, $this->errorArray)){
-                $error="";
+                $error = "";
             }
             return "<span class = 'error message'>$error</span>";
         }
@@ -39,7 +39,7 @@
 
 
         private function validateFirstname($fn){
-            if(strlen($fn) > 25 || strlen($fn)<2){
+            if(strlen($fn) > 25 || strlen($fn) < 2){
                 array_push($this->errorArray, Constant::$firstnamecharacter);
                 return;
             }
@@ -47,7 +47,7 @@
         }
 
         private function validateLastname($ln){
-            if(strlen($ln) > 25 || strlen($ln)<2){
+            if(strlen($ln) > 25 || strlen($ln) < 2){
                 array_push($this->errorArray, Constant::$lastnamecharacter);
                 return;
             }
@@ -75,7 +75,7 @@
                 array_push($this->errorArray, Constant::$passwordnotalphanumeric);
                 return;
             }
-            if(strlen($pw) > 25 || strlen($pw)<8){
+            if(strlen($pw) > 25 || strlen($pw) < 8){
                 array_push($this->errorArray, Constant::$passwordcharacters);
                 return;
             }

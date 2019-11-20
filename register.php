@@ -1,9 +1,10 @@
 <?php
-    include("include/handler/register-handler.php");
+    
     include("include/classes/account.php");
     include("include/classes/Constant.php");
+    $account = new Account();
     include("include/config.php");
-    $account = new account();
+    include("include/handler/register-handler.php");
     function Inputvalue($name){
         if (isset($_POST[$name])){
             echo $_POST[$name];
@@ -74,7 +75,7 @@
             </p>
 
 
-    <button type="submit">SIGN UP</button>
+    <button type="submit" name="registerButton">SIGN UP</button>
     </form>
 
     </div>
