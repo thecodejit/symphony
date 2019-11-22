@@ -2,7 +2,7 @@
     
     include("include/classes/account.php");
     include("include/classes/Constant.php");
-    $account = new Account();
+    $account = new Account($con);
     include("include/config.php");
     include("include/handler/register-handler.php");
     function Inputvalue($name){

@@ -1,8 +1,10 @@
 <?php
     class Account{
+        private $con;
         private $errorArray;
 
-        public function __construct(){
+        public function __construct($con){
+            $this->con = $con;
             $this->errorArray = array();
         }
 
@@ -14,7 +16,7 @@
             $this->validatePasswords($pw, $pw2);
 
             if(empty($this->errorArray) == true){
-                return true;
+                return inserttodb($un, $fn, $ln, $em, $pw);
             }
             else{
                 return false;
@@ -27,6 +29,13 @@
                 $error = "";
             }
             return "<span class = 'error message'>$error</span>";
+        }
+
+        private function inserttodb($un, $fn, $ln, $em, $pw){
+            $encryptpassword = md5($pw);
+            $date = date("Y-m-d");
+            $result = mysqli_query($this->con, "INSERT INTO users VALUES('', '$un', '$fn', '$ln', '$em', '$encryptpassword', '$date')");
+            return $result;
         }
 
         private function validateUsername($un){
